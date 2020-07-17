@@ -1,0 +1,4 @@
+#Fri Jul 17 23:22:35 IST 2020
+base.0=C\:\\Users\\msk\\Desktop\\DUCS\\ZooHack\\WildSaviour\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.0=classes.dex
+renamed.0=classes.dex

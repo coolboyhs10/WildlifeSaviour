@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "921831631574",
+    "firebase_url": "https://wildsaviour.firebaseio.com",
+    "project_id": "wildsaviour",
+    "storage_bucket": "wildsaviour.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921831631574:android:e7a50662850816514e3777",
+        "android_client_info": {
+          "package_name": "com.example.codehead.criminalintent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921831631574-3lo97oi5nah7cc05ibvtvu5v2c3cpp0d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.codehead.criminalintent",
+            "certificate_hash": "592e7f7fb7ac79bc9c1c624fb7aa6df2dc733933"
+          }
+        },
+        {
+          "client_id": "921831631574-g3r820jpavog1bqevodci4uecgqhn8vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDridzQCNOLs0F5jj1Y3yDT8e-G2pK1S04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921831631574-g3r820jpavog1bqevodci4uecgqhn8vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
