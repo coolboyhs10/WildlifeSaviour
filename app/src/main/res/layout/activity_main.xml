@@ -8,55 +8,61 @@
     android:background="@drawable/background"
     tools:context=".LoginActivity">
 
-    <ImageButton
-        android:id="@+id/reward"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+    <Button
+        android:id="@+id/test"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:paddingTop="8dp"
-        android:paddingEnd="8dp"
-        android:background="@drawable/gift" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#3c4245"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/colorTransparentWhite"
+        android:text="Test Notification"
+        />
 
     <Button
-        android:id="@+id/sosbtn"
-        android:layout_width="179dp"
-        android:layout_height="179dp"
+        android:id="@+id/b_map"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:background="@drawable/sos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/viewcrimebtn"
-        android:layout_width="199dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/sosbtn"
-        android:alpha="0.8"
-        android:background="@drawable/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/colorWhite"
-        android:text="View reported crimes"
         android:textColor="#3c4245"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@drawable/button"
+        android:backgroundTint="@color/colorTransparentWhite"
+        android:text="View Area"/>
 
 
-    <ImageView
-        android:id="@+id/hand"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/viewcrimebtn"
-        android:layout_alignStart="@+id/reward"
-        android:background="@drawable/hand"
-        android:backgroundTint="@color/colorWhite" />
+
+
+    <!--<Button-->
+    <!--android:id="@+id/viewcrimebtn"-->
+    <!--android:layout_width="199dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_below="@+id/sosbtn"-->
+    <!--android:alpha="0.8"-->
+    <!--android:background="@drawable/button"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="100dp"-->
+    <!--android:backgroundTint="@color/colorWhite"-->
+    <!--android:text="View reported crimes"-->
+    <!--android:textColor="#3c4245"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.503"-->
+    <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/hand"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_alignBottom="@+id/viewcrimebtn"-->
+    <!--android:layout_alignStart="@+id/reward"-->
+    <!--android:background="@drawable/hand"-->
+    <!--android:backgroundTint="@color/colorWhite" />-->
 
 
 
