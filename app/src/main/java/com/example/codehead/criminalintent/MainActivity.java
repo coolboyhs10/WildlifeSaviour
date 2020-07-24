@@ -22,10 +22,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
+
+import org.json.JSONArray;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST = 1;
-    Button mapButton, testButton;
+    Button flora, fauna, notificationTestButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        mapButton = findViewById(R.id.b_map);
-        testButton = findViewById(R.id.test);
+        flora = findViewById(R.id.b_flora);
+        fauna = findViewById(R.id.b_fauna);
+        notificationTestButton = findViewById(R.id.test);
 
-        testButton.setOnClickListener(new View.OnClickListener() {
+        // Initialize API Request Object
+        AndroidNetworking.initialize(getApplicationContext());
+
+        notificationTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("NOT", "here");
                 int mNotificationId = 001;
-
 
                 NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(MainActivity.this)
@@ -52,9 +62,7 @@ public class MainActivity extends AppCompatActivity {
                                 .setContentText("Click to view")
                                 .setPriority(NotificationCompat.PRIORITY_HIGH);
 
-//                                .setOngoing(true);
 
-//                mBuilder.build();
                 // Create pending intent, mention the Activity which needs to be
                 //triggered when user clicks on notification(StopScript.class in this case)
 
@@ -90,18 +98,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mapButton.setOnClickListener(new View.OnClickListener() {
+        flora.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent newintent=new Intent(MainActivity.this,MapsActivity.class);
+                Intent newintent = new Intent(MainActivity.this, HotspotListActivity.class);
                 startActivity(newintent);
             }
         });
 
+        fauna.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent newintent = new Intent(MainActivity.this, HotspotListActivity.class);
+                startActivity(newintent);
+            }
+        });
 
     }
-
-
 
 }

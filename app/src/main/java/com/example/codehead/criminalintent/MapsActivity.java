@@ -1,5 +1,7 @@
 package com.example.codehead.criminalintent;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -13,14 +15,28 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.example.codehead.criminalintent.HotspotListActivity.EXTRA_LATITUTE;
+import static com.example.codehead.criminalintent.HotspotListActivity.EXTRA_LONGITUDE;
+import static com.example.codehead.criminalintent.HotspotListActivity.EXTRA_NAME;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+    private final Double DEFAULT_LAT = 11.7401;
+    private final Double DEFAULT_LONG = 92.658;
 
     private GoogleMap mMap;
+    private String speciesName;
+    private Double lat, lon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        Intent intent = getIntent();
+        speciesName = intent.getStringExtra(EXTRA_NAME);
+        lat = intent.getDoubleExtra(EXTRA_LATITUTE, DEFAULT_LAT);
+        lon = intent.getDoubleExtra(EXTRA_LONGITUDE, DEFAULT_LONG);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -43,14 +59,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        LatLng pos = new LatLng(lat, lon);
 
         //adding marker
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String timeStamp = dateFormat.format(new Date());
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String timeStamp = dateFormat.format(new Date());
 
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Timestamp: " + timeStamp));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16.0f));
+        mMap.addMarker(new MarkerOptions().position(pos).title("Name: " + speciesName));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos, 16.0f));
 
     }
 }
