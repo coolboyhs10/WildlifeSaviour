@@ -44,12 +44,17 @@ public class HotspotItemAdapter extends RecyclerView.Adapter<HotspotItemAdapter.
         HotspotItem hotspotItem = hotspotItemList.get(position);
 
         String imageUrl = hotspotItem.getImageUrl();
-        String speciesName = hotspotItem.getSpeciesName();
+        String speciesName = hotspotItem.getSpeciesScientificName();
+        String family = hotspotItem.getFamily();
+        int priority = hotspotItem.getPriority();
+        String sites = hotspotItem.getSites();
         LatLng location = hotspotItem.getLocation();
 
         Picasso.with(context).load(imageUrl).fit().centerInside().into(holder.imageView);
         holder.speciesName.setText(speciesName);
-
+        holder.family.setText("Family: "+ family);
+        holder.priority.setText("Priority: " + priority);
+        holder.sites.setText("Sites: " + sites);
     }
 
     @Override
@@ -60,12 +65,18 @@ public class HotspotItemAdapter extends RecyclerView.Adapter<HotspotItemAdapter.
     public class HotspotViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;
         public TextView speciesName;
+        public TextView family;
+        public TextView priority;
+        public TextView sites;
 
         public HotspotViewHolder(View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.species_img);
             speciesName = itemView.findViewById(R.id.species_name);
+            family = itemView.findViewById(R.id.family);
+            priority = itemView.findViewById(R.id.priority);
+            sites = itemView.findViewById(R.id.sites);
 
             itemView.setOnClickListener(new View.OnClickListener () {
 

@@ -64,10 +64,15 @@ public class HotspotListActivity extends AppCompatActivity implements HotspotIte
 
                                 String imageUrl = "https://res.cloudinary.com/tbmg/image/upload/c_scale,w_400,f_auto,q_auto/v1563980020/tb/articles/2019/blog/TB-Blog-072419-Butterfly.jpg";
                                 String speciesName = hotspot.getString("Scientific_Name");
+                                int priority = hotspot.getInt("priority");
+                                int status = hotspot.getInt("Status");
+                                String family = hotspot.getString("Family");
+                                int endemics = hotspot.getInt("Endemic");
+                                String sites = hotspot.getString("Distribution_Sites");
                                 Double Latitude = hotspot.getDouble("Latitude");
                                 Double Longitude = hotspot.getDouble("Longitude");
 
-                                hotspotItemArrayList.add(new HotspotItem(imageUrl, speciesName, new LatLng(Latitude, Longitude)));
+                                hotspotItemArrayList.add(new HotspotItem(imageUrl, new LatLng(Latitude, Longitude), speciesName, sites, endemics, priority, status, family));
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -91,7 +96,7 @@ public class HotspotListActivity extends AppCompatActivity implements HotspotIte
     public void onItemClick(int posistion) {
         Intent mapintent = new Intent(this, MapsActivity.class);
         HotspotItem  clickedItem = hotspotItemArrayList.get(posistion);
-        mapintent.putExtra(EXTRA_NAME, clickedItem.getSpeciesName());
+        mapintent.putExtra(EXTRA_NAME, clickedItem.getSpeciesScientificName());
         mapintent.putExtra(EXTRA_LATITUTE, clickedItem.getLocation().latitude);
         mapintent.putExtra(EXTRA_LONGITUDE, clickedItem.getLocation().longitude);
 
