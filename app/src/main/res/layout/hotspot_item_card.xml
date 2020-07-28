@@ -16,8 +16,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -53,7 +53,7 @@
                 android:layout_below="@id/species_name"
                 android:text="name"
                 android:textColor="#585f93"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 tools:text="South Andaman Island" />
 
             <TextView
@@ -63,7 +63,7 @@
                 android:layout_below="@id/family"
                 android:text="Priority: 2"
                 android:textColor="#585f93"
-                android:textSize="10sp"/>
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/sites"
@@ -72,7 +72,7 @@
                 android:layout_below="@id/priority"
                 android:text="name"
                 android:textColor="#585f93"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 tools:text="South Andaman Island" />
 
 

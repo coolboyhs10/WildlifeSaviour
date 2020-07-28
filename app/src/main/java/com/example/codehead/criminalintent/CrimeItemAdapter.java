@@ -54,7 +54,7 @@ public class CrimeItemAdapter extends RecyclerView.Adapter<CrimeItemAdapter.Crim
         holder.speciesName.setText("Species: " + speciesName);
         holder.crimeArea.setText("Area: "+ crimeArea);
         holder.crimeType.setText("Type: " + crimeType);
-        holder.crimeName.setText(crimeName);
+        holder.crimeName.setText("Crime: " + crimeName);
         holder.crimeDate.setText("Date of crime: " + crimeDate);
 
     }

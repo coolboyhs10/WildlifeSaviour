@@ -37,7 +37,7 @@
                 android:layout_below="@id/crime_name"
                 android:text="name"
                 android:textColor="#585f93"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 tools:text="South Andaman Island" />
 
 
@@ -48,7 +48,7 @@
             android:layout_below="@id/crime_area"
             android:text="name"
             android:textColor="#585f93"
-            android:textSize="10sp"
+            android:textSize="12sp"
             tools:text="South Andaman Island" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_alignParentEnd="true"
                 android:text="Priority: 2"
                 android:textColor="#585f93"
-                android:textSize="10sp"/>
+                android:textSize="12sp"/>
 
 
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_below="@id/crime_type"
                 android:text="name"
                 android:textColor="#585f93"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 tools:text="South Andaman Island" />
 
 
