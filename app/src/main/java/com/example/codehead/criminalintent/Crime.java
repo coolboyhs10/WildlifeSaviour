@@ -1,69 +1,50 @@
 package com.example.codehead.criminalintent;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Date;
 import java.util.UUID;
 
 //this is the model class for crimes
 public class Crime {
 
-    private UUID mId;
-    private String mTitle;
-   //private String mDetails;
-    private Date mDate;
-    private boolean mSolved;
-    private String mSuspect;
+    private String crimeName;
+    private String crimeArea;
+    private String crimeDate;
+    private String crimeType;
+    private LatLng location;
+    private String speciesName;
 
-    public  Crime(){
-        this(UUID.randomUUID());
-    }
-
-    public Crime(UUID id ) {
-        mId = id;
-        mDate = new Date();
-    }
-
-    public UUID getId() {
-        return mId;
+    public Crime(String crimeName, String crimeArea, String crimeDate, String crimeType, LatLng location, String speciesName) {
+        this.crimeName = crimeName;
+        this.crimeArea = crimeArea;
+        this.crimeDate = crimeDate;
+        this.crimeType = crimeType;
+        this.location = location;
+        this.speciesName = speciesName;
     }
 
-    public String getTitle() {
-        return mTitle;
+    public String getCrimeName() {
+        return crimeName;
     }
 
-    public void setTitle(String title) {
-        mTitle = title;
+    public String getCrimeArea() {
+        return crimeArea;
     }
 
-    public Date getDate() {
-        return mDate;
+    public String getCrimeType() {
+        return crimeType;
     }
 
-    public void setDate(Date date) {
-        mDate = date;
+    public String getCrimeDate() {
+        return crimeDate;
     }
 
-    public boolean isSolved() {
-        return mSolved;
+    public LatLng getLocation() {
+        return location;
     }
 
-    public void setSolved(boolean solved) {
-        mSolved = solved;
+    public String getSpeciesName() {
+        return speciesName;
     }
-    public String getSuspect(){
-        return mSuspect;
-    }
-    public void setSuspect(String suspect){
-        mSuspect=suspect;
-    }
-    public String getPhotoFileame(){
-        return "IMG_" + getId().toString() +".jpg";
-    }
-
-    /*public String getDetails() {
-        return mDetails;
-    }
-
-    public void setDetails(String details) {
-        mDetails = details;
-    }*/
 }

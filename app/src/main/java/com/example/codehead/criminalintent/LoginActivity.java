@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 public class LoginActivity extends AppCompatActivity {
 
 
-    EditText editTextPhone, editPassword;
+    EditText editUsername, editPassword;
 
 
 
@@ -46,14 +46,13 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        editTextPhone = findViewById(R.id.mobilenotext);
+        editUsername = findViewById(R.id.username);
         editPassword = findViewById(R.id.pass);
 
-        findViewById(R.id.b_skip).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.b_reg_crime).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
+                Toast.makeText(LoginActivity.this, "register a crime", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -69,6 +68,9 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void verifySignIn(){
         //TODO
+        Toast.makeText(LoginActivity.this, "logged in", Toast.LENGTH_LONG).show();
+        Intent newintent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(newintent);
     }
 
 }

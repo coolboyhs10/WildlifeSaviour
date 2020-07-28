@@ -32,7 +32,7 @@ import org.json.JSONArray;
 public class MainActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST = 1;
-    Button flora, fauna, notificationTestButton;
+    Button hotspots, notificationTestButton;
 
 
     @Override
@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        flora = findViewById(R.id.b_flora);
-        fauna = findViewById(R.id.b_fauna);
+        hotspots = findViewById(R.id.b_hotspots);
         notificationTestButton = findViewById(R.id.test);
 
         // Initialize API Request Object
@@ -98,20 +97,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        flora.setOnClickListener(new View.OnClickListener() {
+        hotspots.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent newintent = new Intent(MainActivity.this, HotspotListActivity.class);
-                startActivity(newintent);
-            }
-        });
-
-        fauna.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent newintent = new Intent(MainActivity.this, HotspotListActivity.class);
+                Intent newintent = new Intent(MainActivity.this, HotspotsTabActivity.class);
                 startActivity(newintent);
             }
         });

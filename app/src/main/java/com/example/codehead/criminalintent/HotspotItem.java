@@ -3,6 +3,9 @@ package com.example.codehead.criminalintent;
 import com.google.android.gms.maps.model.LatLng;
 
 public class HotspotItem {
+
+    //0=flora/ 1=fauna
+    private int type;
     private String imageUrl;
     private String speciesScientificName;
     private int endemic;
@@ -12,7 +15,9 @@ public class HotspotItem {
     private int priority;
     private int status;
 
-    public  HotspotItem(String imageUrl, LatLng location, String speciesScientificName, String sites, int endemic, int priority, int status, String family) {
+    public  HotspotItem(int type, String imageUrl, LatLng location, String speciesScientificName, String sites, int endemic, int priority, int status, String family) {
+
+        this.type = type;
         this.imageUrl = imageUrl;
         this.speciesScientificName = speciesScientificName;
         this.endemic = endemic;
@@ -23,6 +28,10 @@ public class HotspotItem {
         this.status = status;
 
 
+    }
+
+    public int getType() {
+        return type;
     }
 
     public String getImageUrl() {

@@ -43,6 +43,8 @@ public class HotspotItemAdapter extends RecyclerView.Adapter<HotspotItemAdapter.
     public void onBindViewHolder(@NonNull HotspotViewHolder holder, int position) {
         HotspotItem hotspotItem = hotspotItemList.get(position);
 
+        int type = hotspotItem.getType();
+
         String imageUrl = hotspotItem.getImageUrl();
         String speciesName = hotspotItem.getSpeciesScientificName();
         String family = hotspotItem.getFamily();
@@ -50,12 +52,20 @@ public class HotspotItemAdapter extends RecyclerView.Adapter<HotspotItemAdapter.
         String sites = hotspotItem.getSites();
         LatLng location = hotspotItem.getLocation();
 
-        Picasso.with(context).load(imageUrl).fit().centerInside().into(holder.imageView);
-        holder.speciesName.setText(speciesName);
-        holder.family.setText("Family: "+ family);
+            if(type == 0) {
+                //for flora
+                holder.family.setText("Family: "+ family);
+            }
+            else {
+                // for fauna
+                holder.family.setText("Other name: "+ family);
+            }
+
         holder.priority.setText("Priority: " + priority);
         holder.sites.setText("Sites: " + sites);
-    }
+        Picasso.with(context).load(imageUrl).fit().centerInside().into(holder.imageView);
+        holder.speciesName.setText(speciesName);
+        }
 
     @Override
     public int getItemCount() {

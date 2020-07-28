@@ -35,5 +35,11 @@
         Congratulations! You are a \n<b>Wild Devenger</b>\n\nHere is your reward
     </string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main2">HotspotsTabActivity</string>
+    <string name="tab_text_1">FLORA</string>
+    <string name="tab_text_2">FAUNA</string>
+    <string name="tab_text_3">CRIMES</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>

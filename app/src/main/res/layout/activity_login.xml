@@ -8,13 +8,13 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/mobilenotext"
+        android:id="@+id/username"
         android:layout_width="267dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="142dp"
-        android:hint="Enter mobile number"
+        android:hint="Enter username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:hint="Enter password"
-        android:layout_below="@+id/mobilenotext" />
+        android:layout_below="@+id/username" />
 
 
 
@@ -46,18 +46,20 @@
         />
 
     <Button
-        android:id="@+id/b_skip"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:id="@+id/b_reg_crime"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
 
         android:alpha="0.8"
+        android:padding="8dp"
         android:background="@drawable/button"
-        android:text="SKIP >>"
+        android:text="Register crime"
         android:backgroundTint="#f0134d"
         android:textColor="#eeeeee"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent" />
 
 
