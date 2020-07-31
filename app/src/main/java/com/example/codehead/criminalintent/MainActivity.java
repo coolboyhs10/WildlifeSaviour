@@ -22,17 +22,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.androidnetworking.AndroidNetworking;
-import com.androidnetworking.common.Priority;
-import com.androidnetworking.error.ANError;
-import com.androidnetworking.interfaces.JSONArrayRequestListener;
-
-import org.json.JSONArray;
-
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TYPE = "type";
+    public static final String FLORA = "fora";
+    public static final String FAUNA = "fauna";
+
     private static final int MY_PERMISSIONS_REQUEST = 1;
-    Button hotspots, notificationTestButton;
+    Button hotspots, diary, notificationTestButton;
+
 
 
     @Override
@@ -44,11 +42,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         hotspots = findViewById(R.id.b_hotspots);
+        diary = findViewById(R.id.b_open_diary);
+
         notificationTestButton = findViewById(R.id.test);
 
-        // Initialize API Request Object
-        AndroidNetworking.initialize(getApplicationContext());
 
+        hotspots.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent newintent = new Intent(MainActivity.this, HotspotsTabActivity.class);
+                startActivity(newintent);
+            }
+        });
+
+        diary.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent newintent = new Intent(MainActivity.this, DiaryActivity.class);
+                startActivity(newintent);
+            }
+        });
+
+
+//        testing push notification
         notificationTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,14 +115,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        hotspots.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                Intent newintent = new Intent(MainActivity.this, HotspotsTabActivity.class);
-                startActivity(newintent);
-            }
-        });
 
     }
 

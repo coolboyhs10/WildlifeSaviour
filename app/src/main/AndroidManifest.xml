@@ -87,7 +87,10 @@
             android:name=".HotspotsTabActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme" />
-        <activity android:name=".FloraItemsListFragment"></activity>
+        <activity android:name=".FloraItemsListFragment" />
+        <activity android:name=".SpeciesRegisterForm" />
+        <activity android:name=".DiaryActivity" />
+        <activity android:name=".ViewDiaryActivity"></activity>
     </application>
 
 </manifest>

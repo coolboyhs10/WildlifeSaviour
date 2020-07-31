@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.androidnetworking.AndroidNetworking;
+
 public class HotspotsTabActivity extends AppCompatActivity {
 
     /**
@@ -41,6 +43,12 @@ public class HotspotsTabActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotspots_tabs);
+
+
+
+        // Initialize API Request Object
+        AndroidNetworking.initialize(getApplicationContext());
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

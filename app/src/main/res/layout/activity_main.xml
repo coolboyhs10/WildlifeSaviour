@@ -35,4 +35,18 @@
         android:text="View Hotspots"/>
 
 
+    <Button
+        android:id="@+id/b_open_diary"
+        android:layout_width="199dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/b_hotspots"
+        android:layout_marginTop="25dp"
+        android:textColor="#3c4245"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/colorTransparentWhite"
+        android:text="Open Diary"/>
+
+
+
 </RelativeLayout>

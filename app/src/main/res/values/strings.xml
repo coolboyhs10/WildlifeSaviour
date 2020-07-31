@@ -41,5 +41,13 @@
     <string name="tab_text_3">CRIMES</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_species_register_form">SpeciesRegisterForm</string>
+
+    <string name="sp_health">Health Status</string>
+    <string name="sp_common">Select Species Common Name</string>
+    <string name="sp_seen">Previously seen before?</string>
+    <string name="sp_gender">Gender</string>
+    <string name="sp_death">Death Cause</string>
+    <string name="sp_growth">Growth Status</string>
 
 </resources>
