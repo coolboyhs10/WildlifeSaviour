@@ -63,7 +63,7 @@
             android:textColor="#f8f8f8"
             android:layout_weight="1"
             android:background="@drawable/button"
-            android:backgroundTint="#438a5e"
+            android:backgroundTint="#cdb30c"
             android:text="Fauna Diary"/>
 
         <Button
@@ -73,8 +73,20 @@
             android:textColor="#f8f8f8"
             android:layout_weight="1"
             android:background="@drawable/button"
-            android:backgroundTint="#cdb30c"
+            android:backgroundTint="#438a5e"
             android:text="Flora Diary"/>
+
+        <Button
+            android:id="@+id/b_reg_criminal"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textColor="#f8f8f8"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:backgroundTint="#cdb30c"
+            android:text="Criminal Diary">
+
+        </Button>
 
     </LinearLayout>
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.codehead.criminalintent">
-
     <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -11,11 +10,6 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
-    -->
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -25,8 +19,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".beat_officers_list_activity"></activity>
+        <activity android:name=".divisional_officers_list_activity" />
+        <activity android:name=".admin_main_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!-- <receiver android:name="com.example.codehead.criminalintent.BootCompletedIntentReceiver" -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <receiver android:name="com.example.codehead.criminalintent.BootCompletedIntentReceiver" -->
         <!-- android:enabled="true" -->
         <!-- android:exported="true" -->
         <!-- &gt; -->
@@ -39,20 +40,11 @@
         <!-- <category android:name="android.intent.category.DEFAULT"/> -->
         <!-- </intent-filter> -->
         <!-- </receiver> -->
-
-
         <!-- <service android:name=".SyncService" -->
         <!-- android:enabled="true" -->
         <!-- android:exported="true"> -->
         <!-- </service> -->
-
-        <activity android:name=".SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".SplashScreen" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -90,7 +82,7 @@
         <activity android:name=".FloraItemsListFragment" />
         <activity android:name=".SpeciesRegisterForm" />
         <activity android:name=".DiaryActivity" />
-        <activity android:name=".ViewDiaryActivity"></activity>
+        <activity android:name=".ViewDiaryActivity" />
     </application>
 
 </manifest>

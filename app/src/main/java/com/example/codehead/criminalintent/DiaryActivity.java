@@ -17,8 +17,9 @@ public class DiaryActivity extends AppCompatActivity {
     public static final String TYPE = "type";
     public static final String FLORA = "fora";
     public static final String FAUNA = "fauna";
+    public static final String CRIMINAL = "criminal";
 
-    Button reg_fauna, reg_flora, view;
+    Button reg_fauna, reg_flora, reg_criminal, view ;
     DiaryDBHelper diaryDBHelper;
 
     @Override
@@ -31,6 +32,7 @@ public class DiaryActivity extends AppCompatActivity {
         view = findViewById(R.id.b_view);
         reg_flora = findViewById(R.id.b_reg_flora);
         reg_fauna = findViewById(R.id.b_reg_fauna);
+        reg_criminal = findViewById(R.id.b_reg_criminal);
 
         view.setOnClickListener(new View.OnClickListener() {
 
@@ -62,6 +64,14 @@ public class DiaryActivity extends AppCompatActivity {
             }
         });
 
+        reg_criminal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent newintent = new Intent(DiaryActivity.this, SpeciesRegisterForm.class);
+                newintent.putExtra(TYPE, CRIMINAL);
+                startActivity(newintent);
+            }
+        });
 
     }
 
