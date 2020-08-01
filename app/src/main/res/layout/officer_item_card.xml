@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    app:cardBackgroundColor="#dcd6f7"
+    android:elevation="10dp"
+    android:background="@drawable/shadow_effect"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/of_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name sdsdsdfsdf"
+            android:textColor="#424874"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/of_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textColor="#585f93"
+            android:textSize="12sp"
+            tools:text="South Andaman Island" />
+
+        <TextView
+            android:id="@+id/of_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority: 2"
+            android:textColor="#585f93"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/of_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority: 2"
+            android:textColor="#585f93"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/of_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority: 2"
+            android:textColor="#585f93"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/of_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority: 2"
+            android:textColor="#585f93"
+            android:textSize="12sp"/>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
