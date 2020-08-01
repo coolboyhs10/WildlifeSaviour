@@ -22,11 +22,7 @@
         <activity android:name=".beat_officers_list_activity"></activity>
         <activity android:name=".divisional_officers_list_activity" />
         <activity android:name=".admin_main_activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity> <!-- <receiver android:name="com.example.codehead.criminalintent.BootCompletedIntentReceiver" -->
         <!-- android:enabled="true" -->
         <!-- android:exported="true" -->
@@ -57,7 +53,13 @@
         </provider>
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".RewardActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

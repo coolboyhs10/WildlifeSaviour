@@ -70,7 +70,7 @@ public class FaunaItemsListFragment extends Fragment implements HotspotItemAdapt
                                 JSONObject hotspot = response.getJSONObject(i);
 
                                 //String imageUrl = "https://res.cloudinary.com/tbmg/image/upload/c_scale,w_400,f_auto,q_auto/v1563980020/tb/articles/2019/blog/TB-Blog-072419-Butterfly.jpg";
-                                String imageUrl = "photo_link";
+                                String imageUrl = hotspot.getString("photo_link");
                                 String speciesName = hotspot.getString("Common_name");
                                 int priority = hotspot.getInt("priority");
                                 int status = hotspot.getInt("status");

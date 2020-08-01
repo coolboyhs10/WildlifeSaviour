@@ -29,7 +29,7 @@ public class beat_officers_list_activity extends AppCompatActivity {
 
     private void getData(){
         AndroidNetworking.get("http://sih-location-api.herokuapp.com/signup")
-                .addQueryParameter("rank", "Beat Officer")
+                //.addQueryParameter("rank", "Beat Officer")
 //                .addHeaders("token", "1234")
                 .setTag("GetData")
                 .setPriority(Priority.LOW)
@@ -42,8 +42,10 @@ public class beat_officers_list_activity extends AppCompatActivity {
                                 JSONObject officerObj = response.getJSONObject(i);
                                 String rank = officerObj.getString("rank");
                                 String email_id = officerObj.getString("email_id");
+
                                 String name = officerObj.getString("name");
-                                Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
+                                if(rank.equals("Beat Officers"))
+                                    Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
 
                                 String phone = officerObj.getString("phone");
                                 String username = officerObj.getString("username");
