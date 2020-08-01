@@ -7,6 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
+
 import static com.example.codehead.criminalintent.database.DiaryDbSchema.DiaryTable.Cols.date;
 import static com.example.codehead.criminalintent.database.DiaryDbSchema.DiaryTable.Cols.growth_status;
 import static com.example.codehead.criminalintent.database.DiaryDbSchema.DiaryTable.Cols.local_name;
@@ -44,7 +48,7 @@ public class DiaryDBHelper extends SQLiteOpenHelper {
         //create table
         db.execSQL("create table "+ NAME+"("+
                 id + " INTEGER primary key autoincrement,"+
-                date + " TEXT NOT NULL," +
+                date + " datetime NOT NULL," +
                 officer_id + " INTEGER NOT NULL," +
                 local_name + " TEXT," +
                 type + " TEXT," +
@@ -114,6 +118,19 @@ public class DiaryDBHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery(query, null);
         return data;
     }
+
+//    public Cursor getActiveSpecies(){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        final Calendar c = Calendar.getInstance();
+//        int mMonth = c.get(Calendar.MONTH);
+
+//        String query = "SELECT * FROM " + NAME + " WHERE date";
+//        Cursor data = db.rawQuery(query, null);
+//        return data;
+//    }
+
+
 
 
 }

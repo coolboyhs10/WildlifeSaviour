@@ -7,27 +7,21 @@
     android:background="@drawable/background"
     tools:context=".ViewDiaryActivity">
 
-
-    <!--<TextView-->
-        <!--android:id="@+id/h_t2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_marginTop="30dp"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:textSize="25sp"-->
-        <!--android:textStyle="bold"/>-->
-    <!---->
-
     <TextView
-        android:id="@+id/content"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
+        android:text="Hotspots Species List"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"
-        android:text="Diary Content"/>
+        android:textSize="20sp"
+        android:textColor="#424874"
+        android:layout_marginTop="10dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/diary_recycler_view"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </RelativeLayout>
