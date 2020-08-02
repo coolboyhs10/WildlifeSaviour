@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "509510370508",
+    "firebase_url": "https://sih2020hemant.firebaseio.com",
+    "project_id": "sih2020hemant",
+    "storage_bucket": "sih2020hemant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509510370508:android:ae9d23f5cc807adcd0ae69",
+        "android_client_info": {
+          "package_name": "com.example.codehead.criminalintent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509510370508-0ku7c9kesumee152ivgtpultndmocca6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkOT0wBzosILHXOpszGCEH1ICThZWuW8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509510370508-0ku7c9kesumee152ivgtpultndmocca6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
