@@ -46,7 +46,7 @@
         />
 
     <Button
-        android:id="@+id/b_reg_crime"
+        android:id="@+id/local_registration"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
@@ -54,10 +54,10 @@
         android:layout_marginBottom="20dp"
 
         android:alpha="0.8"
-        android:padding="8dp"
         android:background="@drawable/button"
-        android:text="Register crime"
         android:backgroundTint="#f0134d"
+        android:padding="8dp"
+        android:text="Register As Local"
         android:textColor="#eeeeee"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent" />

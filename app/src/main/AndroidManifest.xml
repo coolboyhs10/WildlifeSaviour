@@ -19,11 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".beat_officers_list_activity"></activity>
+        <activity android:name=".local_main_activity"></activity>
+        <activity android:name=".local_register_activity" />
+        <activity android:name=".beat_officers_list_activity" />
         <activity android:name=".divisional_officers_list_activity" />
-        <activity android:name=".admin_main_activity">
-
-        </activity> <!-- <receiver android:name="com.example.codehead.criminalintent.BootCompletedIntentReceiver" -->
+        <activity android:name=".admin_main_activity" /> <!-- <receiver android:name="com.example.codehead.criminalintent.BootCompletedIntentReceiver" -->
         <!-- android:enabled="true" -->
         <!-- android:exported="true" -->
         <!-- &gt; -->
