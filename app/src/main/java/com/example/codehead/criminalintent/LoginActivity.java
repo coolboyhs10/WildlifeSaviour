@@ -2,6 +2,7 @@ package com.example.codehead.criminalintent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -14,7 +15,12 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     Button local_registration;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,20 +94,26 @@ public class LoginActivity extends AppCompatActivity {
                                 if(rank.equals("Admin")){
                                     Intent intent = new Intent(LoginActivity.this, admin_main_activity.class);
                                     startActivity(intent);
+                                    finish();
                                 }
 
                                 else if(rank.equals("Regional Officer")){
                                     Intent intent = new Intent(LoginActivity.this, beat_officers_list_activity.class);
                                     startActivity(intent);
+                                    finish();
                                 }
 
                                 else if(rank.equals("Beat Officer")){
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intent);
+                                    finish();
                                 }
 
                                 else if (rank.equals("Local") || rank.equals("Tourist")){
+                                    //insertIntoFireBase();
                                     Intent intent = new Intent(LoginActivity.this, local_main_activity.class);
+                                    startActivity(intent);
+                                    finish();
                                 }
 
                             } catch (JSONException e) {
@@ -112,8 +125,9 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(ANError anError) {
-
+                        Toast.makeText(getApplicationContext(), "ERROR IN LOGIN ACTIVITY", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
+
 }

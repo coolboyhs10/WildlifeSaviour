@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".local_main_activity"></activity>
+        <activity android:name=".CustomerMapActivity"></activity>
+        <activity android:name=".local_main_activity" />
         <activity android:name=".local_register_activity" />
         <activity android:name=".beat_officers_list_activity" />
         <activity android:name=".divisional_officers_list_activity" />
